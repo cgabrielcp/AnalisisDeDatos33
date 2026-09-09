@@ -28,10 +28,23 @@
 # Flujo Docker Comandos
 
 
-1. navegar a la carpeta
+0. navegar a la carpeta
    ```bash
    cd Sesion2/Docker1
 
 1. Crear una imagen docker
    ```bash
    docker build -t jupyter_notebook .
+
+2. Listar las iamgenes
+   ```bash
+   docker images
+
+3. ejecutar o levantar el contenedor
+   ```bash
+   docker run -d -p 8000:8888 --name jupyter jupyter_notebook 
+
+4. listar los contenedores
+
+   ```bash
+   docker ps
