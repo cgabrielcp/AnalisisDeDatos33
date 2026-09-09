@@ -1,0 +1,25 @@
+# Definir una imagen Base
+FROM python:3.9-slim
+
+# Actualizar el sistema e instalar paquetes.
+# Instalando la libreria pip y notebook
+RUN pip3 install --upgrade pip && \
+    pip3 install notebook=6.5.6
+
+# definir el directorio de trabajo
+WORKDIR /workspace
+
+# Almacenar mis archivos de informacion
+RUN mkdir -p /root/.jupyter
+
+# Se agregan las configuraciones basicas de entrno jupyter
+RUN echo "c.notebookApp.token = ''" >> /root/.jupyter/jupyter_notebook.config.py && \
+    echo "c.notebookApp.password = ''" >> /root/.jupyter/jupyter_notebook.config.py && \
+    echo "c.notebookApp.open_browser = False" >> /root/.jupyter/jupyter_notebook.config.py && \
+    echo "c.notebookApp.allow_root = True" >> /root/.jupyter/jupyter_notebook.config.py
+
+# Puerto de exp del contenedor    
+EXPOSE 8888
+
+# Comando por Defecto al iniciar
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
