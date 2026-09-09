@@ -13,10 +13,10 @@ WORKDIR /workspace
 RUN mkdir -p /root/.jupyter
 
 # Se agregan las configuraciones basicas de entrno jupyter
-RUN echo "c.notebookApp.token = ''" >> /root/.jupyter/jupyter_notebook_config.py && \
-    echo "c.notebookApp.password = ''" >> /root/.jupyter/jupyter_notebook_config.py && \
-    echo "c.notebookApp.open_browser = False" >> /root/.jupyter/jupyter_notebook_config.py && \
-    echo "c.notebookApp.allow_root = True" >> /root/.jupyter/jupyter_notebook_config.py
+RUN echo "c.NotebookApp.token = ''" >> /root/.jupyter/jupyter_notebook_config.py && \
+    echo "c.NotebookApp.password = ''" >> /root/.jupyter/jupyter_notebook_config.py && \
+    echo "c.NotebookApp.open_browser = False" >> /root/.jupyter/jupyter_notebook_config.py && \
+    echo "c.NotebookApp.allow_root = True" >> /root/.jupyter/jupyter_notebook_config.py
 
 # Puerto de exp del contenedor    
 EXPOSE 8888

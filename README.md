@@ -34,7 +34,7 @@
 
 1. Crear una imagen docker
    ```bash
-   docker build -t jupyter_notebook .
+   docker build --no-cache -t jupyter_notebook .
 
 2. Listar las iamgenes
    ```bash
@@ -48,3 +48,8 @@
 
    ```bash
    docker ps
+
+5. Comandos adicionales
+   ```bash
+   docker rm -f jupyter # Eliminar contenedor
+   docker rmi -f 222f5d7d304c # Eliminar imagen
