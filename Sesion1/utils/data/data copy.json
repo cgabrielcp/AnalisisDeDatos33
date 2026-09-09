@@ -1,0 +1,34 @@
+[
+  {
+    "cliente_id": 1025,
+    "nombre": "Cesar Condor",
+    "email": "cesar@email.com",
+    "activo": true,
+    "telefonos": [
+      {
+        "tipo": "personal",
+        "numero": "999888777"
+      }
+    ],
+    "direccion": {
+      "ciudad": "Lima",
+      "pais": "Peru"
+    }
+  },
+  {
+    "cliente_id": 1026,
+    "nombre": "Maria Lopez",
+    "email": "maria@email.com",
+    "activo": false,
+    "telefonos": [
+      {
+        "tipo": "personal",
+        "numero": "988777666"
+      }
+    ],
+    "direccion": {
+      "ciudad": "Arequipa",
+      "pais": "Peru"
+    }
+  }
+]
