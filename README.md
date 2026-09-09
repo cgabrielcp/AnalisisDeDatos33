@@ -24,3 +24,14 @@
     ```bash
    git push origin main
 
+
+# Flujo Docker Comandos
+
+
+1. navegar a la carpeta
+   ```bash
+   cd Sesion2/Docker1
+
+1. Crear una imagen docker
+   ```bash
+   docker build -t jupyter_notebook .
