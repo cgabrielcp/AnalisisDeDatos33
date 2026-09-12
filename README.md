@@ -56,3 +56,15 @@
 
 
 -- pip install -r requirements.txt  # instalar paquetes desde un archivo
+
+
+# Comando Composer
+
+
+0. navegar a la carpeta
+   ```bash
+   cd Sesion3/utils
+
+1. Levantar el servicio
+   ```bash
+   docker compose up
